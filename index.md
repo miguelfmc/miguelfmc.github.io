@@ -1,1 +1,1 @@
-## Welcome to py personal website!
+## Welcome to my personal website!
