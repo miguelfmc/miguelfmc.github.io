@@ -9,16 +9,15 @@ permalink: /resume/
 Education
 ---------
 
-2019-2020
+Aug. 2019 - May 2020
 :   **MEng, Industrial Engineering and Operations Research**; University of California, Berkeley
 
     *Specialization in Data Science, Statistical Modeling, Machine Learning and Optimization*
 
-
-2017-2020
+Sep. 2017 - May 2020
 :   **MS, Industrial Technology Engineering**; Technical University of Madrid
 
-2013-2017
+Sep. 2013 - Sep. 2017
 :   **BS, Industrial Technology Engineering**; Technical University of Madrid
 
     *Graduated in the **top 3%** of the class*
@@ -39,61 +38,13 @@ Nov. 2018 - Jul. 2019
 Feb. 2018 - Jul. 2018
 :   **Business Intelligence Intern**; Stratebi Business Solutions
 
-* Constructed data warehouse to streamline the analysis of 1M+ records from Supply Chain data using SQL & Online Analytical Processing tools
-* Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by 98%
-* Trained 20+ professionals from the Inspection and Certification industry in Microsoft PowerBI
+* Constructed data warehouse to streamline the analysis of **1M+** records from Supply Chain data using SQL & Online Analytical Processing tools
+* Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by **98%**
+* Trained **20+** professionals from the Inspection and Certification industry in Microsoft PowerBI
 
-Technical Experience
+Skills
 --------------------
 
-My Cool Side Project
-:   For items which don't have a clear time ordering, a definition
-    list can be used to have named items.
-
-    * These items can also contain lists, but you need to mind the
-      indentation levels in the markdown source.
-    * Second item.
-
-Open Source
-:   List open source contributions here, perhaps placing emphasis on
-    the project names, for example the **Linux Kernel**, where you
-    implemented multithreading over a long weekend, or **node.js**
-    (with [link](http://nodejs.org)) which was actually totally
-    your idea...
-
-Programming Languages
-:   **first-lang:** Here, we have an itemization, where we only want
-    to add descriptions to the first few items, but still want to
-    mention some others together at the end. A format that works well
-    here is a description list where the first few items have their
-    first word emphasized, and the last item contains the final few
-    emphasized terms. Notice the reasonably nice page break in the pdf
-    version, which wouldn't happen if we generated the pdf via html.
-
-:   **second-lang:** Description of your experience with second-lang,
-    perhaps again including a [link] [ref], this time placing the url
-    reference elsewhere in the document to reduce clutter (see source
-    file). 
-
-:   **obscure-but-impressive-lang:** We both know this one's pushing
-    it.
-
-:   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
-
-Extra Section, Call it Whatever You Want
-----------------------------------------
-
-* Human Languages:
-
-     * English (native speaker)
-     * ???
-     * This is what a nested list looks like.
-
-* Random tidbit
-
-* Other sort of impressive-sounding thing you did
-
-----
-
-> <email@example.com> • +00 (0)00 000 0000 • XX years old\
-> address - Mytown, Mycountry
+:  **Computing**: Python, R, SQL, Matlab, Microsoft PowerBI, Pentaho, BASH
+:  **Libraries**: pandas, scikit-learn, pytorch, tensorflow, keras, numpy, matplotlib, statsmodels, dplyr, ggplot2
+:  **Research interests**: Experimental Design and Analysis, Computational Statistics, Deep Learning, Computer Vision, Natural Language Processing
