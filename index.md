@@ -1,5 +1,3 @@
-<img src="https://github.com/miguelfmc/personal-website/blob/master/personal_photo.jpg" width="200">
-
 <img src="personal_photo.jpg" width="200">
 
 I am a recent graduate from the Master of Engineering in Industrial Engineering and Operations Research at University of California, Berkeley.
