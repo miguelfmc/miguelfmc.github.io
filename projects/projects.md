@@ -6,7 +6,7 @@ permalink: /projects/
 
 # Projects
 
-### Review and Comparison of Methods for Subset Selection in Linear Regression
+### Review and Comparison of Subset Selection Methods for Linear Regression
 
 In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
 
