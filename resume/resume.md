@@ -45,6 +45,6 @@ Feb. 2018 - Jul. 2018
 Skills
 --------------------
 
-      **Computing**: Python, R, SQL, Matlab, Microsoft PowerBI, Pentaho, BASH
-      **Libraries**: pandas, scikit-learn, pytorch, tensorflow, keras, numpy, matplotlib, statsmodels, dplyr, ggplot2
-      **Research interests**: Experimental Design and Analysis, Computational Statistics, Deep Learning, Computer Vision, Natural Language Processing
+    **Computing**: Python, R, SQL, Matlab, Microsoft PowerBI, Pentaho, BASH
+    **Libraries**: pandas, scikit-learn, pytorch, tensorflow, keras, numpy, matplotlib, statsmodels, dplyr, ggplot2
+    **Research interests**: Experimental Design and Analysis, Computational Statistics, Deep Learning, Computer Vision, Natural Language Processing
