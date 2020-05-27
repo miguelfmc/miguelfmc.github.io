@@ -39,27 +39,22 @@ Graduated in the **top 3%** of the class
 * Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by 98%
 * Trained 20+ professionals from the Inspection and Certification industry in Microsoft PowerBI
 
-
--------------------     ----------------------------
-1 MyAddress                        email@example.com
-MyTown 1000                          @twitter_handle
-MyCountry                           1800 my-phone-nr
--------------------     ----------------------------
-
 Education
 ---------
 
-2010-2014 (expected)
-:   **PhD, Computer Science**; Awesome University (MyTown)
+2019-2020
+:   **MEng, Industrial Engineering and Operations Research**; University of California, Berkeley
 
-    *Thesis title: Deep Learning Approaches to the Self-Awesomeness
-     Estimation Problem*
+    *Specialization in Data Science, Statistical Modeling, Machine Learning and Optimization*
 
-2007-2010
-:   **BSc, Computer Science and Electrical Engineering**; University of
-    HomeTown (HomeTown)
 
-    *Minor: Awesomeology*
+2017-2020
+:   **MS, Industrial Technology Engineering**; Technical University of Madrid
+
+2013-2017
+:   **BS, Industrial Technology Engineering**; Technical University of Madrid
+
+    *Graduated in the **top 3%** of the class*
 
 Experience
 ----------
@@ -116,8 +111,6 @@ Programming Languages
 
 :   Basic knowledge of **C**, **x86 assembly**, **forth**, **Common Lisp**
 
-[ref]: https://github.com/githubuser/superlongprojectname
-
 Extra Section, Call it Whatever You Want
 ----------------------------------------
 
@@ -131,3 +124,7 @@ Extra Section, Call it Whatever You Want
 
 * Other sort of impressive-sounding thing you did
 
+----
+
+> <email@example.com> • +00 (0)00 000 0000 • XX years old\
+> address - Mytown, Mycountry
