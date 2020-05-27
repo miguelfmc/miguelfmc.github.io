@@ -1,4 +1,4 @@
-<img src="personal_photo.jpg" width="300">
+<img align="left" width="300" src="personal_photo.jpg">
 
 I am a recent graduate from the Master of Engineering in Industrial Engineering and Operations Research at University of California, Berkeley.
 Prior to my studies in Berkeley I completed my Bachelor's and Master's degrees in Industrial Engineering at the Technical University of Madrid.
