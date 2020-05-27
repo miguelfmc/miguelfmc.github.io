@@ -7,6 +7,7 @@ permalink: /resume/
 # Resume
 
 ### Education
+***
 #### University of California, Berkeley
 MEng Industrial Engineering and Operations Research
 
@@ -21,6 +22,7 @@ BS Industrial Technology Engineering
 Graduated in the **top 3%** of the class
 
 ### Experience
+***
 #### Technical University of Madrid
 **Machine Learning Research Assistant**
 
