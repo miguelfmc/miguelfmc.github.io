@@ -10,7 +10,7 @@ permalink: /resume/
 #### University of California, Berkeley
 MEng Industrial Engineering and Operations Research
   
-  Specialization in Data Science, Statistical Modeling, Machine Learning and Optimization
+    Specialization in Data Science, Statistical Modeling, Machine Learning and Optimization
 
 #### Technical University of Madrid
 MS Industrial Technology Engineering
@@ -18,7 +18,7 @@ MS Industrial Technology Engineering
 #### Technical University of Madrid
 BS Industrial Technology Engineering
   
-  Graduated in the **top 3%** of the class
+    Graduated in the **top 3%** of the class
 
 ### Experience
 #### Technical University of Madrid
