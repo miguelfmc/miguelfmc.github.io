@@ -16,7 +16,7 @@ A detailed description of the project nd my results can be found [here](subset-s
 
 In this project, done in collaboration with the Berkeley-Singapore Building Efficiency and Sustainability Program, a group of Berkeley grad students and I analyze the change in energy consumption in a particular office building after different energy-saving strategies.
 
-A detailed description of the project can be found [here](energy-savings.md).
+A detailed description of the project can be found [here](energy-saving.md).
 
 ## Deep Learning for Lip Reading
 
