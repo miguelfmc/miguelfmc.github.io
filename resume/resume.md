@@ -4,7 +4,8 @@ description: My resume
 permalink: /resume/
 ---
 
-# Resume
+Resume
+============
 
 Education
 ---------
@@ -58,3 +59,9 @@ Skills
 
 **Research interests**
 :   Experimental Design and Analysis, Computational Statistics, Deep Learning, Computer Vision, Natural Language Processing
+
+----
+
+>  Download PDF version [here](resume_website.pdf)
+
+----
