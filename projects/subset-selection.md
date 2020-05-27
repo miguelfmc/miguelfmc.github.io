@@ -4,7 +4,7 @@ description: Review of Methods for Subset Selection
 permalink: /projects/subset-selection
 ---
 
-# Review and Comparison of Methods for Subset Selection in Linear Regression
+# Review and Comparison of Subset Selection Methods for Linear Regression
 
 ### Abstract
 
