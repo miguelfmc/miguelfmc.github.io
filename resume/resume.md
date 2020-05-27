@@ -16,6 +16,8 @@ Aug. 2019 - May 2020
 
 Sep. 2017 - May 2020
 :   **MS, Industrial Technology Engineering**; Technical University of Madrid
+    
+    * *
 
 Sep. 2013 - Sep. 2017
 :   **BS, Industrial Technology Engineering**; Technical University of Madrid
