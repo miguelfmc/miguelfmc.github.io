@@ -6,39 +6,6 @@ permalink: /resume/
 
 # Resume
 
-### Education
-***
-#### University of California, Berkeley
-MEng Industrial Engineering and Operations Research
-
-Specialization in Data Science, Statistical Modeling, Machine Learning and Optimization
-
-#### Technical University of Madrid
-MS Industrial Technology Engineering
-
-#### Technical University of Madrid
-BS Industrial Technology Engineering
-  
-Graduated in the **top 3%** of the class
-
-### Experience
-***
-#### Technical University of Madrid
-**Machine Learning Research Assistant**
-
-*Funded by Collaboration Grant from the Technical University of Madrid*
-
-* Processed medical signals using Python to build time-frequency representations of the data
-* Investigated machine learning models for neurodegenerative disease diagnostics
-* Trained and validated deep learning models (1D and 2D Convolutional Neural Nets) with keras
-
-#### Stratebi Business Solutions
-**Business Intelligence Intern**
-
-* Constructed data warehouse to streamline the analysis of 1M+ records from Supply Chain data using SQL & Online Analytical Processing tools
-* Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by 98%
-* Trained 20+ professionals from the Inspection and Certification industry in Microsoft PowerBI
-
 Education
 ---------
 
@@ -56,23 +23,44 @@ Education
 
     *Graduated in the **top 3%** of the class*
 
+
+### Experience
+#### Technical University of Madrid
+**Machine Learning Research Assistant**
+
+*Funded by Collaboration Grant from the Technical University of Madrid*
+
+* Processed medical signals using Python to build time-frequency representations of the data
+* Investigated machine learning models for neurodegenerative disease diagnostics
+* Trained and validated deep learning models (1D and 2D Convolutional Neural Nets) with keras
+
+#### Stratebi Business Solutions
+**Business Intelligence Intern**
+
+* Constructed data warehouse to streamline the analysis of 1M+ records from Supply Chain data using SQL & Online Analytical Processing tools
+* Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by 98%
+* Trained 20+ professionals from the Inspection and Certification industry in Microsoft PowerBI
+
+
 Experience
 ----------
 
-**Your Most Recent Work Experience:**
+Nov. 2018 - Jul. 2019
+:   **Machine Learning Research Assistant**; Technical University of Madrid
 
-Short text containing the type of work done, results obtained,
-lessons learned and other remarks. Can also include lists and
-links:
+*Funded by Collaboration Grant from the Technical University of Madrid*
 
-* First item
+* Processed medical signals using Python to build time-frequency representations of the data
+* Investigated machine learning models for neurodegenerative disease diagnostics
+* Trained and validated deep learning models (1D and 2D Convolutional Neural Nets) with keras
 
-* Item with [link](http://www.example.com). Links will work both in
-  the html and pdf versions.
 
-**That Other Job You Had**
+Feb. 2018 - Jul. 2018
+:   **Business Intelligence Intern**; Stratebi Business Solutions
 
-Also with a short description.
+* Constructed data warehouse to streamline the analysis of 1M+ records from Supply Chain data using SQL & Online Analytical Processing tools
+* Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by 98%
+* Trained 20+ professionals from the Inspection and Certification industry in Microsoft PowerBI
 
 Technical Experience
 --------------------
