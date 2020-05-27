@@ -23,13 +23,16 @@ BS Industrial Technology Engineering
 ### Experience
 #### Technical University of Madrid
 **Machine Learning Research Assistant**
+
 *Funded by Collaboration Grant from the Technical University of Madrid*
+
 * Processed medical signals using Python to build time-frequency representations of the data
 * Investigated machine learning models for neurodegenerative disease diagnostics
 * Trained and validated deep learning models (1D and 2D Convolutional Neural Nets) with keras
 
 #### Stratebi Business Solutions
 **Business Intelligence Intern**
+
 * Constructed data warehouse to streamline the analysis of 1M+ records from Supply Chain data using SQL & Online Analytical Processing tools
 * Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by 98%
 * Trained 20+ professionals from the Inspection and Certification industry in Microsoft PowerBI
