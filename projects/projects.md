@@ -10,7 +10,7 @@ permalink: /projects/
 
 In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
 
-A detailed description of the project nd my results can be found [here](subset-selection.md).
+A detailed description of the project and my results can be found [here](subset-selection.md).
 
 ### Characterizing Behavioral Changes in Energy Use
 
