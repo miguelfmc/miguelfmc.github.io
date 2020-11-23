@@ -6,6 +6,13 @@ permalink: /projects/
 
 # Projects
 
+### Forecasting Energy Demand in California
+
+In this series of notebooks I explore the hourly electricity load for PG&E, a Californian utility company, and develop models to forecast demand:
+
+1. [Exploratory Data Analysis](1_CaliforniaEnergyDemandEDA.html)
+2. [Long-term forecasting with Prophet](2_LoadForecastingWithProphet.html)
+
 ### Review and Comparison of Subset Selection Methods for Linear Regression
 
 In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
