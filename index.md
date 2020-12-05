@@ -28,8 +28,7 @@ In this series of notebooks I analyze the hourly electricity load for PG&E, a Ca
 ### Review and Comparison of Subset Selection Methods for Linear Regression
 
 In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
-
-A detailed description of the project and my results can be found [here](subset-selection.md).
+Here you can download the full [paper](https://github.com/miguelfmc/subset-selection/raw/master/MiguelFMC_Project_SubsetSelection.pdf) and here you may find the [code](https://github.com/miguelfmc/subset-selection/).
 
 ### Characterizing Behavioral Changes in Energy Use
 
