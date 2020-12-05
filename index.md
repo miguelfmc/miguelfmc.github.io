@@ -8,9 +8,10 @@ Prior to my studies in Berkeley I completed my Bachelor's and Master's degrees i
 
 My main interests lie in the areas of statistical learning and optimization, and I am looking to develop my career as a data scientist in the Bay Area.
 
-In this website you will find my main personal projects and resume.
+In this website you will find my latest personal projects and resume.
 
 
+***
 ***
 
 
@@ -68,19 +69,18 @@ Jul. 2020 - Present
 
 Nov. 2018 - Jul. 2019
 :   **Machine Learning Research Assistant**; Technical University of Madrid
-
 *Funded by Collaboration Grant from the Technical University of Madrid*
 
-* Processed medical signals using Python to build time-frequency representations of the data
-* Investigated machine learning models for neurodegenerative disease diagnostics
-* Trained and validated deep learning models (1D and 2D Convolutional Neural Nets) with keras
+* Processed gait signals from medical trials using Python to build **time-frequency data representations**
+* Investigated **machine learning models** for neurodegenerative disease diagnostics
+* Trained and validated deep learning models (1D and 2D **Convolutional Neural Networks**) with **keras**
 
 
 Feb. 2018 - Jul. 2018
 :   **Business Intelligence Intern**; Stratebi Business Solutions
 
 * Constructed data warehouse to streamline the analysis of **1M+** records from Supply Chain data using SQL & Online Analytical Processing tools
-* Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by **98%**
+* Implemented Extraction, Transformation and Loading (**ETL**) processes to integrate sales and forecast data, reducing processing time by **98%**
 * Trained **20+** professionals from the Inspection and Certification industry in Microsoft PowerBI
 
 
