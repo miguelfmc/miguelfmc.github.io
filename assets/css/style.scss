@@ -10,3 +10,18 @@
 .inner {
   max-width: 60%;
 }
+
+.circular--landscape {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circular--landscape img {
+  width: auto;
+  height: 100%;
+  margin-left: -10px;
+}
