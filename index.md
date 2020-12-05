@@ -21,8 +21,8 @@ Projects
 
 In this series of notebooks I analyze the hourly electricity load for PG&E, a Californian utility company, and develop models to forecast electricity demand.
 
-1. [Exploratory Data Analysis](1_CaliforniaEnergyDemandEDA.html)
-2. [Long-term Energy Forecasting with Prophet](2_LoadForecastingWithProphet.html)
+1. [Exploratory Data Analysis](projects/1_CaliforniaEnergyDemandEDA.html)
+2. [Long-term Energy Forecasting with Prophet](projects/2_LoadForecastingWithProphet.html)
 3. Short-term Energy Forecasting with GAMs
 
 ### Review and Comparison of Subset Selection Methods for Linear Regression
