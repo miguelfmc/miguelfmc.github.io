@@ -8,7 +8,6 @@ My main interests lie in the areas of statistical learning and optimization, and
 In this website you will find my main personal projects and resume.
 
 
-HEYyy6789
 
 
 ***
