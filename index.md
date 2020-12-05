@@ -60,7 +60,7 @@ Experience
 ----------
 
 Jul. 2020 - Present
-:   **Business Intelligence Intern**; Stratebi Business Solutions
+:   **Analytics Associate**; 159 Solutions, Inc.
 
 * Coordinated on-shore and off-shore teams to support the operation and development of a custom **reporting** & **CRM** platform serving **100+ users**
 * Worked directly with Project Manager and client to develop sales force performance analyses leveraging an **AWS Data Warehouse** and **SQL**
