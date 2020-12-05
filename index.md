@@ -14,7 +14,7 @@ In this website you will find my main personal projects and resume.
 ***
 
 
-Projects
+Latest Projects
 ============
 
 ### Forecasting Energy Demand in California
@@ -31,6 +31,7 @@ In this project, I compare several statistical learning methods that aim to solv
 Here you can download the full [paper](https://github.com/miguelfmc/subset-selection/raw/master/MiguelFMC_Project_SubsetSelection.pdf) and here you may find the [code](https://github.com/miguelfmc/subset-selection/).
 
 
+***
 ***
 
 
