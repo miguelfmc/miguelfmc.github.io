@@ -7,6 +7,36 @@ My main interests lie in the areas of statistical learning and optimization, and
 
 In this website you will find my main personal projects and resume.
 
+Projects
+============
+
+### Forecasting Energy Demand in California
+
+In this series of notebooks I analyze the hourly electricity load for PG&E, a Californian utility company, and develop models to forecast electricity demand.
+
+1. [Exploratory Data Analysis](1_CaliforniaEnergyDemandEDA.html)
+2. [Long-term Energy Forecasting with Prophet](2_LoadForecastingWithProphet.html)
+3. Short-term Energy Forecasting with GAMs
+
+### Review and Comparison of Subset Selection Methods for Linear Regression
+
+In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
+
+A detailed description of the project and my results can be found [here](subset-selection.md).
+
+### Characterizing Behavioral Changes in Energy Use
+
+In this project, done in collaboration with the Berkeley-Singapore Building Efficiency and Sustainability Program, a group of Berkeley grad students and I analyze the change in energy consumption in a particular office building after different energy-saving strategies.
+
+A detailed description of the project can be found [here](energy-saving.md).
+
+### Deep Learning for Lip Reading
+
+In this project, still in progress, a fellow Berkeley graduate student and I implement neural network architectures in order to transcribe videos pf people speaking to text, in other words, *lip reading*.
+
+A detailed description of the project can be found [here](lip-reading.md).
+
+
 Resume
 ============
 
