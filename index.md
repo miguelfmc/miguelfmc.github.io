@@ -9,8 +9,8 @@ In this website you will find my main personal projects and resume.
 
 
 
+<hr>
 
-***
 
 
 Projects
