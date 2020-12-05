@@ -102,6 +102,6 @@ Skills
 
 ----
 
->  Download PDF version [here](resume/resume_website.pdf)
+>  Download PDF version [here](resume/miguelfmc_resume.pdf)
 
 ----
