@@ -69,6 +69,7 @@ Jul. 2020 - Present
 
 Nov. 2018 - Jul. 2019
 :   **Machine Learning Research Assistant**; Technical University of Madrid
+
 *Funded by Collaboration Grant from the Technical University of Madrid*
 
 * Processed gait signals from medical trials using Python to build **time-frequency data representations**
