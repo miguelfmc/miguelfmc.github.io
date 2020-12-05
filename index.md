@@ -1,4 +1,4 @@
-<div>
+<p>
 
 <img align="left" width="300" src="personal_photo.jpg" style="float: left; padding-right: 30px">
 
@@ -11,7 +11,7 @@ In this website you will find my main personal projects and resume.
 
 HEY
 
-</div>
+</p>
 
 ***
 
