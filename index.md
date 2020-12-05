@@ -1,6 +1,6 @@
-<img align="left" width="300" src="personal_photo.jpg" style="float: left; padding-right: 30px">
-
 ***
+
+![Miguel](/personal_photo.jpg){.image}
 
 I am a recent graduate from the <b>Master of Engineering in Industrial Engineering and Operations Research</b> at the <b>University of California, Berkeley</b>.
 Prior to my studies in Berkeley I completed my Bachelor's and Master's degrees in Industrial Engineering at the <b>Technical University of Madrid</b>.
