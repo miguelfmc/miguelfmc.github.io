@@ -30,17 +30,8 @@ In this series of notebooks I analyze the hourly electricity load for PG&E, a Ca
 In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
 Here you can download the full [paper](https://github.com/miguelfmc/subset-selection/raw/master/MiguelFMC_Project_SubsetSelection.pdf) and here you may find the [code](https://github.com/miguelfmc/subset-selection/).
 
-### Characterizing Behavioral Changes in Energy Use
 
-In this project, done in collaboration with the Berkeley-Singapore Building Efficiency and Sustainability Program, a group of Berkeley grad students and I analyze the change in energy consumption in a particular office building after different energy-saving strategies.
-
-A detailed description of the project can be found [here](energy-saving.md).
-
-### Deep Learning for Lip Reading
-
-In this project, still in progress, a fellow Berkeley graduate student and I implement neural network architectures in order to transcribe videos pf people speaking to text, in other words, *lip reading*.
-
-A detailed description of the project can be found [here](lip-reading.md).
+***
 
 
 Resume
@@ -67,6 +58,13 @@ Sep. 2013 - Sep. 2017
 Experience
 ----------
 
+Jul. 2020 - Present
+:   **Business Intelligence Intern**; Stratebi Business Solutions
+
+* Coordinated on-shore and off-shore teams to support the operation and development of a custom **reporting** & **CRM** platform serving **100+ users**
+* Worked directly with Project Manager and client to develop sales force performance analyses leveraging an **AWS Data Warehouse** and **SQL**
+
+
 Nov. 2018 - Jul. 2019
 :   **Machine Learning Research Assistant**; Technical University of Madrid
 
@@ -84,6 +82,7 @@ Feb. 2018 - Jul. 2018
 * Implemented Extraction, Transformation and Loading (ETL) processes to integrate sales and forecast data, reducing processing time by **98%**
 * Trained **20+** professionals from the Inspection and Certification industry in Microsoft PowerBI
 
+
 Skills
 --------------------
 
@@ -91,10 +90,7 @@ Skills
 :   Python, R, SQL, Matlab, BASH
 
 **Libraries and frameworks**
-:   pandas, scikit-learn, pytorch, tensorflow, keras, numpy, matplotlib, statsmodels, dplyr, ggplot2
-
-**Other technologies**
-:   Microsoft PowerBI, Pentaho
+:   numpy, matplotlib, pandas, scikit-learn, statsmodels, pytorch, tensorflow, keras, dplyr, ggplot2, Hadoop, Spark
 
 **Research interests**
 :   Experimental Design and Analysis, Computational Statistics, Deep Learning, Computer Vision, Natural Language Processing
