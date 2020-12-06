@@ -14267,13 +14267,13 @@ a.anchor-link {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="California-Energy-Demand-Analysis">California Energy Demand Analysis<a class="anchor-link" href="#California-Energy-Demand-Analysis">&#182;</a></h1><h1 id="Long-Term-Load-Forecasting:-Facebook-Prophet">Long-Term Load Forecasting: Facebook Prophet<a class="anchor-link" href="#Long-Term-Load-Forecasting:-Facebook-Prophet">&#182;</a></h1><p>This is the second of a series of notebooks that dive into the problem of predicting electricity demand through several time series analysis methods.
+<h1 id="California-Energy-Demand-Analysis---Part-2">California Energy Demand Analysis - Part 2<a class="anchor-link" href="#California-Energy-Demand-Analysis---Part-2">&#182;</a></h1><h1 id="Long-Term-Load-Forecasting-With-Facebook-Prophet">Long-Term Load Forecasting With Facebook Prophet<a class="anchor-link" href="#Long-Term-Load-Forecasting-With-Facebook-Prophet">&#182;</a></h1><p>This is the second of a series of notebooks that dive into the problem of predicting electricity demand through several time series analysis methods.
 The first notebook, which you can find <a href="./EDA.ipynb">here</a>, focused on describing and exploring the dataset that will be leveraged to build our forecasting models.
 As a brief summary, the dataset consists of the <strong>hourly energy load for the PG&amp;E electricity system</strong>, which serves approximately the two northern thirds of the State of California.</p>
 <p>Forecasting can be performed for different time horizons, from just a few hours to years.
 In this notebook, we will focus on <strong>long-term forecasting</strong>, up to <strong>one year ahead</strong>.
 For this task, we will primarily use Facebook's <a href="https://facebook.github.io/prophet/">Prophet</a> library.</p>
-<p>All the modeling and analysis presented here was developed using <a href="https://jupyter.org/">Jupyter Lab</a>.
+<p>All the modeling and analysis presented here were developed using <a href="https://jupyter.org/">Jupyter Lab</a>.
 The original Jupyter notebook, with all the necessary code, can be found on my <strong><a href="https://github.com/miguelfmc">GitHub</a></strong>.
 I have cleaned the original notebook by removing most of the code cells and keeping the text and plots.</p>
 
@@ -14354,10 +14354,10 @@ According to the authors:</p>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Transformation-of-the-Time-Series">Transformation of the Time Series<a class="anchor-link" href="#Transformation-of-the-Time-Series">&#182;</a></h3><p>As seen in our Exploratory Analysis and in the visualization above, electricity demand seems to have variance roughly proportional to its mean.
+<h3 id="Transforming-the-Response-Variable">Transforming the Response Variable<a class="anchor-link" href="#Transforming-the-Response-Variable">&#182;</a></h3><p>As seen in our Exploratory Analysis and in the visualization above, electricity demand seems to have variance roughly proportional to its mean.
 In other to reduce this changes in variance throughout the year, we will log-transform our time series.
 Note that other transformations i.e. Box-Cox transformations, are possible as well.
-The log transform is common-place in energy forecasting, however.</p>
+The log transform is commonplace in energy forecasting, however.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_remove-code">
@@ -14413,18 +14413,8 @@ In this case we will use a popular scale-indifferent metric for forecasting eval
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Baseline-Model">Baseline Model<a class="anchor-link" href="#Baseline-Model">&#182;</a></h3><p>We will use a baseline model consisting of predicting a given time period demand with the equivalent from the previous year, that is, shifting our Train set by 8760 hours.</p>
 <p>The performance of this simple method is surprisingly accurate, with a <strong>MAPE of 7.03%</strong> on the validation set.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<hr>
 
 </div>
 </div>
@@ -14694,7 +14684,7 @@ Later we will evaluate if capturing these different patterns yields a better for
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>After evaluating this model's performance on the validation set (2016 data), we achieve a <strong>MAPE of 6.76 %</strong> which shows a significant improvement from our simple Prophet model from earlier and also beats the baseline model's performance.</p>
+<p>After evaluating this model's performance on the validation set (2016 data), we achieve a <strong>MAPE of 6.76 %</strong>, which shows a significant improvement from our simple Prophet model from earlier and also beats the baseline model's performance.</p>
 
 </div>
 </div>
@@ -14967,12 +14957,12 @@ Then, we will report its MAPE on our Test Set, the first 9 months of 2017, as a 
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We plot our final forecast on the Test Set, both fot the transformed variable (log) and the original units (MW).
+<p>We plot our final forecast on the Test Set, both for the transformed variable (log) and the original units (MW).
 In the first plot, we leverage Prophet's prediction interval (a 50% prediction interval) to get an idea of where future observations are likely to fall in.
 Note that these uncertainty intervals are constructed from the uncertainty in the trend.
 We know that energy demand has very flat trend, which is not likely to change significantly.
 Thus, it would be more realistic to assess uncertainty using the uncertainty in the seasonality.
-While Prophet allows that, it requires MCMC sampling which makes the computation of our model fairly slow and I have kept it out of this notebook for simplicity.</p>
+While Prophet allows that, it requires fairly intense computation so I have kept it out of this notebook for simplicity.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_remove-code">
@@ -15021,7 +15011,7 @@ While Prophet allows that, it requires MCMC sampling which makes the computation
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Our final model achieves a <strong>MAPE of 5.99%</strong> and a <strong>MAE of 778.59 MW</strong> on the Test set.</p>
+<p>Our final model achieves a <strong>MAPE of 5.99%</strong> and a <strong>Mean Absolute Error (MAE) of 778.59 MW</strong> on the Test set.</p>
 
 </div>
 </div>
@@ -15056,7 +15046,10 @@ The decision not include these pieces of information was deliberate, as a model 
 I believe one way to improve the performance of this model could be to include information from previous years as an external regressor.
 Another way to improve our model's performance could be to further sophisticate the daily demand patterns by making them conditional on each month or week of the year.</p>
 <p>Additionally, this model could be a starting point for models intended to forecast demand at shorter horizons, which could realistically include lagged observations and weather forecasts as extra features.</p>
-<p>The next steps in our analysis of PG&amp;E's electricity load will be to develop models short and mid-term forecasting, using other Python libraries such as <strong>PyGAM</strong> and R frameworks such as <strong>auto.arima</strong>.</p>
+<p>The next steps in our analysis of PG&amp;E's electricity load will be to develop models for short-term forecasting (one or a few days ahead):</p>
+<ul>
+<li><a href="https://github.com/miguelfmc/personal-website/blob/master/projects/3_LoadForecastingGAMs.html">Part 3: Short-Term Energy Forecasting With GAMs</a></li>
+</ul>
 
 </div>
 </div>

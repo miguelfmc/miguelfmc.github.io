@@ -14267,11 +14267,11 @@ a.anchor-link {
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="California-Energy-Demand-Analysis">California Energy Demand Analysis<a class="anchor-link" href="#California-Energy-Demand-Analysis">&#182;</a></h1><h1 id="Exploratory-Analysis-with-2016-Data">Exploratory Analysis with 2016 Data<a class="anchor-link" href="#Exploratory-Analysis-with-2016-Data">&#182;</a></h1><p>This is the first of a series of notebooks that dive into the problem of predicting <strong>hourly electricity demand</strong> through several time series analysis methods.</p>
+<h1 id="California-Energy-Demand-Analysis---Part-1">California Energy Demand Analysis - Part 1<a class="anchor-link" href="#California-Energy-Demand-Analysis---Part-1">&#182;</a></h1><h1 id="Exploratory-Data-Analysis">Exploratory Data Analysis<a class="anchor-link" href="#Exploratory-Data-Analysis">&#182;</a></h1><p>This is the first of a series of notebooks that dive into the problem of predicting <strong>hourly electricity demand</strong> through several time series analysis methods.</p>
 <p>Predicting electricity demand is crucial for utilities companies as well as other organizations in the electric sector in order to properly plan and operate the generation and distribution of energy, as well as to devise future expansions of the power system.</p>
-<p>This notebook serves as an initial <strong>Exploratory Data Analysis of PG&amp;E's Hourly Electricity Load</strong>, which will help understand the data before jumping into developing forecasting models in later notebooks.
-We will analyze a single year of electricity demand, 2016, although other years will be included later on during the model fitting stages.</p>
-<p>All the modeling and analysis presented here was developed using <a href="https://jupyter.org/">Jupyter Lab</a>.
+<p>This notebook serves as an initial <strong>Exploratory Data Analysis of PG&amp;E's</strong> (a Californian utility company) <strong>Hourly Electricity Load</strong>, which will help understand the data before developing forecasting models later on.
+We will analyze a single year of electricity demand, 2016, although other years will be included during the model fitting stages.</p>
+<p>All the analysis presented here was developed using <a href="https://jupyter.org/">Jupyter Lab</a>.
 The original Jupyter notebook, with all the necessary code, can be found on my <strong><a href="https://github.com/miguelfmc">GitHub</a></strong>.
 I have cleaned the original notebook by removing most of the code cells and keeping the text and plots.</p>
 
@@ -14283,16 +14283,18 @@ I have cleaned the original notebook by removing most of the code cells and keep
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data-Loading-and-Preparation">Data Loading and Preparation<a class="anchor-link" href="#Data-Loading-and-Preparation">&#182;</a></h2><p>First, we load the <strong>2016 California EMS Hourly Load</strong> data into a pandas DataFrame.
+<h2 id="Data-Loading-and-Preparation">Data Loading and Preparation<a class="anchor-link" href="#Data-Loading-and-Preparation">&#182;</a></h2><p>First, we need to get our data.
+We will be using the <strong>2016 California EMS Hourly Load</strong>.
 The historical data is stored in an Excel file which can be found and downloaded from <a href="http://www.caiso.com/planning/Pages/ReliabilityRequirements/ReliabilityRequirementsArchive.aspx">here</a>.
 The first few records are shown below.
-As can be seen, the dataset includes hourly electricity loads for each of the main electricity distributors in California:</p>
+The dataset includes hourly electricity loads (in MegaWatts (MW)) for each of the main electricity distributors in California:</p>
 <ul>
-<li>PG&amp;E</li>
-<li>SCE</li>
-<li>SDGE</li>
-<li>VEA</li>
+<li>PG&amp;E: Pacific Gas and Electric</li>
+<li>SCE: Southern California Edison</li>
+<li>SDGE: San Diego Gas and Electric</li>
+<li>VEA: Valley Electric Association</li>
 </ul>
+<p>For this analysis, we will only be interested in <strong>PG&amp;E's electricity demand</strong>.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_remove-code">
@@ -14402,18 +14404,13 @@ As can be seen, the dataset includes hourly electricity loads for each of the ma
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For this analysis, we will only be interested in <strong>PG&amp;E's electricity demand</strong>.</p>
-
-</div>
-</div>
-<div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <hr>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Data-Visualization-and-Exploration">Data Visualization and Exploration<a class="anchor-link" href="#Data-Visualization-and-Exploration">&#182;</a></h2><p>In order to better understand the behavior of PG&amp;E's electricity load throughout 2016, we will proceed to visualize our data in several ways, starting with a simple time plot of the hourly demand for the entire duration of 2016.
-As can be seen in the plot below, electricity load shows multiple seasonality patterns (e.g. daily, weekly) and is generally higher during the Summer.</p>
+As can be seen in the plot below, electricity load shows multiple seasonality patterns (e.g. daily, weekly, yearly) and is generally higher during the Summer.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_remove-code">
@@ -14441,7 +14438,7 @@ As can be seen in the plot below, electricity load shows multiple seasonality pa
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Daily-&amp;-Weekly-Seasonality">Daily &amp; Weekly Seasonality<a class="anchor-link" href="#Daily-&amp;-Weekly-Seasonality">&#182;</a></h3><p>Let's explore the seasonality of our data further.
-For that purpose, we add several useful fields to our time series, such as Hour, Day of Week and Month.</p>
+For that purpose, we add several useful fields to the original time series, such as Hour, Day of Week and Month, which we can use to segment and aggregate our data.</p>
 
 </div>
 </div>
@@ -14482,7 +14479,6 @@ The daily seasonality pattern changes from Winter to Summer months, with the for
 <p>The next plot helps us study the load distributions at different times of the day and year.
 As can be seen, hourly load in February is lower and shows less variance than in July for several times of day.
 Indeed, the distributions plotted below are generally more "spread-out" in July than in February.</p>
-<p>The bimodal (Winter) vs. unimodal (Summer) behavior mentioned before can also be captured in these plots, in which the 12pm load during February seems to be lower than the 8am load in February.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_remove-code">
@@ -14588,7 +14584,7 @@ As mentioned before, the Summer months see a higher average load and stronger va
 <li>Christmas </li>
 </ul>
 <p>The plot below shows the daily load curves for several US Federal holidays, as well as the days before and after the holiday, compared to the daily curves for the rest of the days in the month when that holiday took place.
-It can be seen that certain holidays, such as <strong>Christmas Day</strong>, show significantly low energy demand compared to most other days in the month.</p>
+Certain holidays, such as <strong>Christmas Day</strong>, show significantly low energy demand compared to most other days in December.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell    celltag_remove-code">
@@ -14615,8 +14611,8 @@ It can be seen that certain holidays, such as <strong>Christmas Day</strong>, sh
 
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Autocorrelation">Autocorrelation<a class="anchor-link" href="#Autocorrelation">&#182;</a></h3><p>Finally, given that we are dealing with time series data, it is worth analyzing the correlation between observations.
-To remove non-stationary seasonal and non-seasonal effects we will take first seasonal and non-seasonal (with a period of 24 hours) differences and then calculate the ACF and PACF of the differenced series.</p>
+<h3 id="Autocorrelation">Autocorrelation<a class="anchor-link" href="#Autocorrelation">&#182;</a></h3><p>Finally, given that we are dealing with time series data, it is worth analyzing the correlation between observations at different lags.
+To remove non-stationary seasonal and non-seasonal effects we will take first seasonal (with a period of 24 hours) and non-seasonal differences and then calculate the <a href="https://otexts.com/fpp2/autocorrelation.html">Autocorrelation Function</a> and <a href="https://en.wikipedia.org/wiki/Partial_autocorrelation_function">Partial Autocorrelation Function</a> of the differenced series.</p>
 <ul>
 <li><p>The <strong>PACF</strong> shows significant correlations at <strong>lags 24, 48, and so on</strong>, as well as some short-term correlations (mainly at lag 1). This could mean that auto-regressive terms (AR) at the relevant lags could model this series well.</p>
 </li>
@@ -14655,7 +14651,7 @@ To remove non-stationary seasonal and non-seasonal effects we will take first se
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Temperature-Analysis">Temperature Analysis<a class="anchor-link" href="#Temperature-Analysis">&#182;</a></h2><p>As we have seen, purely temporal information (time of day, day of week, time of year, holidays and past observations) can tell us a lot about the expected hourly electricity load.
-However, it is well-known that weather, and most notably temperature, is greatly correlated with electricity demand.</p>
+However, it is well-known that weather, and most notably temperature, is correlated with electricity demand.</p>
 <p>Let us know take a look at hourly temperature for two cities in California: Los Angeles and San Francisco, for 2016, and how they correlate with energy consumption.
 Temperature data was obtained from <a href="https://www.kaggle.com/selfishgene/historical-hourly-weather-data?select=temperature.csv">this Kaggle dataset</a>, which in turn was compiled using <a href="https://openweathermap.org/api">Weather API</a>.</p>
 
@@ -14804,7 +14800,7 @@ Highest temperatures occur, obviously, between the late morning and early aftern
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Finally, let's explore the relationship between temperature and energy demand by visualizing a scatterplot of both variables.
-As can be seen below, hourly load has roughly quadratic relationship with San Francisco and Los Angeles temperature.
+As can be seen below, hourly load has a roughly quadratic relationship with San Francisco and Los Angeles temperature.
 The correlation seems to increase at higher temperatures and flatten out at lower ones.
 In fact, when temperatures decrease below a certain level, energy demand seems to slightly increase again.
 Note that, given the warm temperatures in these two cities, we are not able to fully see the typical "U"-shaped pattern between energy demand and temperature.</p>
@@ -14852,7 +14848,11 @@ By visualizing energy demand aggregate at different time scales we have gathered
 <li>Electricity demand shows a non-linear but substantial <strong>relationship with temperature</strong>, roughly equivalent to higher demand at higher temperatures and perhaps higher demand when temperatures go below a certain level</li>
 </ol>
 <p>These take-aways will be helpful when deciding which features to include when developing a forecasting model for PG&amp;E's hourly energy demand.
-The next step in this process is precisely developing these models, starting with a long-term forecasting model using Facebook's open source library Prophet.</p>
+The next step in this process is precisely developing these models:</p>
+<ul>
+<li><a href="https://github.com/miguelfmc/personal-website/blob/master/projects/2_LoadForecastingWithProphet.html">Part 2: Long-Term Energy Forecasting With Facebook Prophet</a></li>
+<li><a href="https://github.com/miguelfmc/personal-website/blob/master/projects/3_LoadForecastingGAMs.html">Part 3: Short-Term Energy Forecasting With GAMs</a></li>
+</ul>
 
 </div>
 </div>
