@@ -24,7 +24,7 @@ In this series of notebooks I analyze the hourly electricity load for PG&E, a Ca
 
 1. [Exploratory Data Analysis](projects/1_CaliforniaEnergyDemandEDA.html)
 2. [Long-term Energy Forecasting with Prophet](projects/2_LoadForecastingWithProphet.html)
-3. Short-term Energy Forecasting with GAMs
+3. [Short-term Energy Forecasting with GAMs](projects/3_LoadForecastingGAMs.html)
 
 ### Review and Comparison of Subset Selection Methods for Linear Regression
 
