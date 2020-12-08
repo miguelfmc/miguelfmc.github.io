@@ -14272,7 +14272,7 @@ a.anchor-link {
 For this task, we will be using Generalized Additive Models (or GAMs), implemented in the <a href="https://pygam.readthedocs.io/en/latest/">PyGAM</a> library.
 These models have been used for energy forecasting before, for example in this paper by <a href="https://robjhyndman.com/publications/stlf/">Hyndman and Fang</a>.</p>
 <p>All the modeling and analysis presented here was developed using <a href="https://jupyter.org/">Jupyter Lab</a>.
-The original Jupyter notebook, with all the necessary code, can be found on my <strong><a href="https://github.com/miguelfmc">GitHub</a></strong>.
+The original Jupyter notebook, with all the necessary code, can be found on my <strong><a href="https://github.com/miguelfmc/california-energy-demand">GitHub</a></strong>.
 I have cleaned the original notebook by removing most of the code cells and keeping the text and plots.</p>
 <h2 id="A-Very-Brief-Intro-to-Generalized-Additive-Models">A Very Brief Intro to Generalized Additive Models<a class="anchor-link" href="#A-Very-Brief-Intro-to-Generalized-Additive-Models">&#182;</a></h2><p>Generalized Additive Models (or GAMs) are a generalization of Generalized Linear Models, in which the expected value of the response variable is modeled as a <strong>sum of smooth functions of the covariates</strong>, (in some cases a <em>link function</em> is used; in our case, however, the link function is the identity function, so we will not have to worry about that).</p>
 <p>While the term "smooth function" can be very broad, these are normally modeled as <a href="https://en.wikipedia.org/wiki/Smoothing_spline">smoothing splines</a>.
