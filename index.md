@@ -60,7 +60,14 @@ Sep. 2013 - Sep. 2017
 Experience
 ----------
 
-Jul. 2020 - Present
+
+Mar. 2021 - Present
+:   **Data Scientist**; PayPal
+
+* Developing end-to-end machine learning solutions, from data collection to model deployment, within the Payments domain
+
+
+Jul. 2020 - Feb. 2021
 :   **Analytics Associate**; 159 Solutions, Inc.
 
 * Coordinated on-shore and off-shore teams to support the operation and development of a custom **reporting** & **CRM** platform serving **100+ users**
@@ -89,13 +96,13 @@ Skills
 --------------------
 
 **Programming languages**
-:   Python, R, SQL, Matlab, BASH
+:   Python, R, SQL, BASH, Matlab
 
 **Libraries and frameworks**
-:   numpy, matplotlib, pandas, scikit-learn, statsmodels, pytorch, tensorflow, keras, dplyr, ggplot2, Hadoop, Spark
+:   numpy, matplotlib, pandas, scikit-learn, statsmodels, pytorch, tensorflow, keras, xgboost, lightgbm, H2O, Hadoop, Spark
 
 **Research interests**
-:   Experimental Design and Analysis, Computational Statistics, Deep Learning, Computer Vision, Natural Language Processing
+:   Experimental Design and Analysis, Time Series Analysis, Deep Learning, Computer Vision, Natural Language Processing
 
 ----
 
