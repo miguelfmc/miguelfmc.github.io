@@ -18,6 +18,12 @@ In this website you will find my latest personal projects and resume.
 Latest Projects
 ============
 
+### Bayesian Data Analysis Mini-Case Studies
+
+Recently, I have been learning the basics of Bayesian inference and I am creating a series of "explainers" to share what I believe are some of the key concepts in Bayesian stats in a visual way
+
+1. [A gentle introduction to Bayesian inference - Part 1](projects/LogisticRegression-Part1.html)
+
 ### Forecasting Energy Demand in California
 
 In this series of notebooks I analyze the hourly electricity load for PG&E, a Californian utility company, and develop models to forecast electricity demand.
