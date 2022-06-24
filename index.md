@@ -3,10 +3,9 @@
 
 ![Miguel](/personal_photo.jpg){: .image}
 
-I am a recent graduate from the **Master of Engineering in Industrial Engineering and Operations Research** at the **University of California, Berkeley**.
-Prior to my studies in Berkeley I completed my Bachelor's and Master's degrees in Industrial Engineering at the **Technical University of Madrid**.
+I am a **Machine Learning Scientist at PayPal** as well as a recent graduate from the **Master of Engineering in Industrial Engineering and Operations Research** at the **University of California, Berkeley**.
 
-My main interests lie in the areas of statistical learning and optimization, and I am looking to develop my career as a data scientist in the Bay Area.
+My main interests lie in the areas of statistical learning and optimization. I love learning about all things data, engineering, ML and decision science. Bay Area resident and always happy to connect!
 
 In this website you will find my latest personal projects and resume.
 
@@ -23,6 +22,7 @@ Latest Projects
 Recently, I have been learning the basics of Bayesian inference and I am creating a series of "explainers" to share what I believe are some of the key concepts in Bayesian stats in a visual way
 
 1. [A gentle introduction to Bayesian inference - Part 1](projects/LogisticRegression-Part1.html)
+2. [A gentle introduction to Bayesian inference - Part 2: Monte Carlo and MCMC](projects/LogisticRegression-Part2.html)
 
 ### Forecasting Energy Demand in California
 
@@ -68,7 +68,7 @@ Experience
 
 
 Mar. 2021 - Present
-:   **Data Scientist**; PayPal
+:   **Machine Learning Scientist**; PayPal
 
 * Developing end-to-end machine learning solutions, from data collection to model deployment, within the Payments domain
 
