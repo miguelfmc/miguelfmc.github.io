@@ -17,6 +17,14 @@ In this website you will find my latest personal projects and resume.
 Latest Projects
 ============
 
+### Subset Selection Methods for Linear Regression
+
+I recently implemented a simple but quite interesting method for subset selection in regression as a [scikit-learn compatible package](https://github.com/miguelfmc/sklearn-discretefirstorder).
+
+This work was inspired by one of my old grad school projects, in which I compared several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
+Here you can download the full [paper](https://github.com/miguelfmc/subset-selection/raw/master/MiguelFMC_Project_SubsetSelection.pdf) and here you may find my [original code](https://github.com/miguelfmc/subset-selection/).
+
+
 ### Bayesian Data Analysis Mini-Case Studies
 
 Recently, I have been learning the basics of Bayesian inference and I am creating a series of "explainers" to share what I believe are some of the key concepts in Bayesian stats in a visual way
@@ -31,11 +39,6 @@ In this series of notebooks I analyze the hourly electricity load for PG&E, a Ca
 1. [Exploratory Data Analysis](projects/1_CaliforniaEnergyDemandEDA.html)
 2. [Long-term Energy Forecasting with Prophet](projects/2_LoadForecastingWithProphet.html)
 3. [Short-term Energy Forecasting with GAMs](projects/3_LoadForecastingGAMs.html)
-
-### Review and Comparison of Subset Selection Methods for Linear Regression
-
-In this project, I compare several statistical learning methods that aim to solve, either exactly or approximately, the best subset selection problem in linear regression.
-Here you can download the full [paper](https://github.com/miguelfmc/subset-selection/raw/master/MiguelFMC_Project_SubsetSelection.pdf) and here you may find the [code](https://github.com/miguelfmc/subset-selection/).
 
 
 ***
