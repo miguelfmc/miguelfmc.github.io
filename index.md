@@ -17,6 +17,12 @@ In this website you will find my latest personal projects and resume.
 Latest Projects
 ============
 
+### Shellper AI: Command Line Tool with Click + OpenAI API
+
+I wanted to get my feet wet with the OpenAI API and leverage the power of their GPT models, so I built a quick-and-dirty CLI (with the help of ChatGPT) that will help you find the Linux shell commands that you need for your tasks, right from the command line.
+
+Check it out [here](https://github.com/miguelfmc/shellper-ai).
+
 ### Subset Selection Methods for Linear Regression
 
 I recently implemented a simple but quite interesting method for subset selection in regression as a [scikit-learn compatible package](https://github.com/miguelfmc/sklearn-discretefirstorder).
