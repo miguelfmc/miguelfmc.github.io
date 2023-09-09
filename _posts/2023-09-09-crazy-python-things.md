@@ -1,6 +1,7 @@
 ---
-layout: post
+layout: default
 title: "A Few Crazy Python Things"
+theme: jekyll-theme-slate
 ---
 
 # A Few Crazy Python Things (Part I)
