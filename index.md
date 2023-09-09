@@ -7,7 +7,7 @@ I am a **Machine Learning Scientist at PayPal** as well as a recent graduate fro
 
 My main interests lie in the areas of statistical learning and optimization. I love learning about all things data, engineering, ML and decision science. Bay Area resident and always happy to connect!
 
-In this website you will find my latest personal projects and resume.
+In this website you will find my latest personal projects, resume and [**blog**](blog.html).
 
 
 ***
