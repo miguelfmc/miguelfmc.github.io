@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "A Few Crazy Python Things"
+title: "A Few Crazy Python Things (Part I)"
 theme: jekyll-theme-slate
 ---
 
