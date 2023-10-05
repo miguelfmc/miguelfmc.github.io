@@ -172,6 +172,41 @@ So, when we execute a for-loop, an iterator is created out of our iterable, and 
 
 Taking things one step further, let's talk about **generators**.
 
+A very abstract but useful definition of a generator is a **piece of computation through which we can step through in a iterative manner**.
+Basically, a generator allows us to **iterate through computation (code)**.
+
+We can define a generator in a very similar way to a regular Python function.
+However, in this we will use the `yield` key word, which is an essential part of generators.
+These functions are normally referred to as *generator functions*.
+
+When we call the generator function, we instantiate a generator *object*.
+A generator is an *iterator* and can be used in the same way as any other iterator.
+
+See the example below:
+
+```python
+# generator function
+def counter(n):
+    for i in range(n):
+        yield i
+
+# creating our generator object
+cnt = counter(10)
+print(cnt)
+# <generator object counter at ...>
+
+# iteration
+print(next(cnt))
+# 0
+print(next(cnt))
+# 1
+```
+
+Generator functions allow us to build iterators with significantly smaller memory footprint than if we were to create the full data e.g. a list, from the beginning.
+This is because we perform the computation step-by-step, as we iterate.
+
+While the memory benefits from lazy evaluation are a key advantage of generators, this is just scratching the surface of what generators can do.
+
 ...
 
 ## 14. Modules
