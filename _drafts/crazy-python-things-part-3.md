@@ -24,7 +24,7 @@ This begs the question: if classes are also objects (everything is an object in 
 
 ### Class definition: another way
 
-We are familiar with the standard class definition syntax
+We are familiar with the standard class definition syntax:
 
 ```python
 class MyClass:
@@ -39,7 +39,7 @@ Thus, the code above is equivalent to:
 MyClass = type("MyClass", (), {"__init__": lambda self, name: setattr(self, "name", name)})
 ```
 
-In a nutshell, `type` takes three arguments: the class name, the class' "bases" (aka its parents) and its namespace i.e. what will become its `__dict__` attribute.
+In a nutshell, `type` (when used for class creation) takes three arguments: the class name, the class' "bases" i.e. its parents, and its namespace i.e. what will become its `__dict__` attribute.
 Here is a snippet from the [Python documentation](https://docs.python.org/3/library/functions.html#type) on `type`:
 
 > ```python
@@ -56,12 +56,12 @@ Standard class construction is a (tricky) process involving several steps (which
 Put briefly, when a class is constructed the body of the class is executed in a new namespace, the class object is created and the namespace is then assigned to the object's `__dict__` attribute.
 You can read more about it [here](https://docs.python.org/3/reference/datamodel.html#customizing-class-creation).
 
-Without getting too much into the weeds, let's notice how this sheds some light on the question I posed earlier (which class creates classes).
-`type` is indeed a class used to create classes i.e. `type` is a **metaclass** (in fact, it is the go-to metaclass, which controls class construction unless specified otherwise).
+Without getting too much into the weeds, let's notice how this sheds some light on the question I posed earlier - *which class creates classes?*.
+It tuns out that `type` *is* a class used to create classes i.e. `type` is a **metaclass** (in fact, it is the go-to metaclass, which controls class construction unless specified otherwise).
 
 ### Metaclasses
 
-So, basically metaclasses are classes that control class construction.
+Basically, metaclasses are classes that control class construction.
 And we can customize class construction (the process I described above) by defining our own metaclasses.
 Wild, isn't it?
 
@@ -93,7 +93,7 @@ print(type(user))
 # <class '__main__.User'>
 ```
 
-This example is not very useful. 
+This example doesn't do much more than show that we can change the class construction process. 
 Let's now use a metaclass for something more interesting: registering classes in a dictionary - this is a potential real-life use-case for metaclasses:
 
 ```python
@@ -168,59 +168,335 @@ This brings us to the concepts of *iterable* and *iterator* (which I always conf
 
 So, when we execute a for-loop, an iterator is created out of our iterable, and the `__next__` method is called until we reach a `StopIteration`.
 
-## 13. Generators and coroutines
+## 13. Generators
 
 Taking things one step further, let's talk about **generators**.
 
-A very abstract but useful definition of a generator is a **piece of computation through which we can step through in a iterative manner**.
+A definition I find useful is that a generator is a **piece of computation through which we can step through in a iterative manner**.
 Basically, a generator allows us to **iterate through computation (code)**.
 
 We can define a generator in a very similar way to a regular Python function.
-However, in this we will use the `yield` key word, which is an essential part of generators.
+However, we will use the `yield` key word to indicate where the generator should "halt" and, if we want, to determine what should the generator return at each step.
 These functions are normally referred to as *generator functions*.
 
-When we call the generator function, we instantiate a generator *object*.
-A generator is an *iterator* and can be used in the same way as any other iterator.
-
+When we call the generator function, we instantiate a *generator object*.
+A generator is an *iterator* and can be used as such.
 See the example below:
 
 ```python
 # generator function
-def counter(n):
-    for i in range(n):
-        yield i
+def squares(n):
+    for num in range(n):
+        yield num ** 2
 
 # creating our generator object
-cnt = counter(10)
-print(cnt)
-# <generator object counter at ...>
+sqrs = squares(10)
+print(sqrs)
+# <generator object squares at ...>
 
 # iteration
-print(next(cnt))
+print(next(sqrs))
 # 0
-print(next(cnt))
+print(next(sqrs))
 # 1
+
+# with a for-loop
+for num in sqrs:
+    print(num)
+# 4
+# 9
+# 16
+# 25
+# 36
+# ...
+
+# Notice that the generator object that we enter in the for-loop
+# is the same we instantiated earlier and
+# it "picks up" where we left it
 ```
 
-Generator functions allow us to build iterators with significantly smaller memory footprint than if we were to create the full data e.g. a list, from the beginning.
-This is because we perform the computation step-by-step, as we iterate.
+The example above is not very useful, but it illustrates the basic usage of generators.
+
+One of the main advantages of generators is bthat they allow us to build iterators with significantly smaller memory footprint than if we were to create a full data container e.g. a list.
+
+In many cases we don't need to store all our data since we might only need it for some computation.
+In such situations, using generators can help us save a lot of memory.
+Let's compare the memory traces of the generator and non-generator approach in a simple example in which we sum the first 100 thousand squares.
+
+```python
+import tracemalloc
+
+
+tracemalloc.start()
+
+sqrs_lst = [x ** 2 for x in range(100_000)]
+result = sum(lst)
+size, peak = tracemalloc.get_traced_memory()
+
+print(size, peak)
+
+tracemalloc.clear_traces()
+tracemalloc.start()
+
+
+def squares(n):
+    for num in range(n):
+        yield num ** 2
+
+
+sqrs_gen = squares(10)
+result = sum(sqrs_gen)
+size, peak = tracemalloc.get_traced_memory()
+
+print(size, peak)
+```
+
+You will likely see a **big** difference in memory usage.
+
+By the way, we can turn our beloved list comprehensions into *generator comprehensions* to save us some lines and be more Pythonic, so instead of our generator function above we could have simply written:
+
+```python
+sqrs_gen = (x ** 2 for x in range(100_000))
+```
 
 While the memory benefits from lazy evaluation are a key advantage of generators, this is just scratching the surface of what generators can do.
 
-...
+There are a bunch of resources to learn more about this topic.
+David Beazley has a [trilogy](http://www.dabeaz.com/generators/) [of](http://www.dabeaz.com/coroutines/) [courses](http://www.dabeaz.com/finalgenerator/) on generators and coroutines, a related and even wilder concept, that I encourage you to check out!
 
 ## 14. Modules
 
-...
+Importing modules is the bread and butter of any non-trivial Python work, but what are modules exactly?
+What happens when we import them?
+What kinds of weird behvior may we encounter when doing so?
 
-## 15. Circular imports
+According to the official Python [documentation](https://docs.python.org/3/tutorial/modules.html):
 
-...
+> A module is a file containing Python definitions and statements
+
+Indeed, we can create a Python file like the one below, which we will name `user.py`:
+
+```python
+# user.py
+
+
+print("Executing user module...")
+
+
+DEFAULT_DOMAIN = "gmail.com"
+
+
+class User:
+    def __init__(self, name, email, age):
+        self.name = name
+        self.email = email
+        self.age = age
+
+
+def create_email(name, domain=DEFAULT_DOMAIN):
+    return name.lower() + "@" + domain
+```
+
+We can then import this file from a different file or from an interactive session in the same directory with the well-known `import` syntax.
+
+```python
+import user
+# Executing user module...
+
+
+print(type(user))
+# <class 'module'>
+
+name = "George"
+email = user.create_email(name)
+age = 22
+
+usr = user.User(name, email, age)
+```
+
+What is exactly happening when we run `import user`?
+
+First of all, Python needs to look for the module.
+There is a whole process for this that I won't get into but that I recommend you [read about](https://docs.python.org/3/tutorial/modules.html#the-module-search-path).
+Then, a object of type `module`, is created i.e. `user` in the example above.
+The code in `user.py` gets executed **in its entirety**, as you can tell from that `print` statement.
+The names of funtions, variables and classes defined in `user.py` get added to the *namespace* of the `user` module object.
+
+As you probably know, we can also import specific definitions from a module via the `from ... import ...` syntax.
+The module *also* gets executed in its entirety when we do this!
+The only difference is that only the specified definitions get added to the current scope (and that the module itself is not added to the local namespace).
+
+There is more: imported modules get ***cached***!
+In other words, modules are imported only once.
+
+Building on the example above, try the following from an interactive session:
+
+```python
+from user import User
+# Executing user module...
+
+import user
+# you will not see the text 'Executing user module...' again!
+
+
+name = "George"
+email = user.create_email(name)
+age = 22
+
+usr = User(name, email, age)
+```
+
+What's happening under the hood is that the module is getting cached and added to `sys.modules` after the first import statement (feel free to import `sys` and check the `sys.modules` object yourself).
+When we run the second import statement the module *is not* executed again - Python simply assigns the module to the name `user` in the local scope.
+
+## 15. Packages
+
+Packages are how we organize several modules in Python.
+A package is basically directory containing several modules, including an `__init__.py` module, and, potentially, sub-packages.
+
+To better understand how packages work in, try to create the following directory structure:
+
+```
+application/
+├── __init__.py
+├── item.py
+└── user.py
+```
+
+For now, `__init__.py` will be an empty file.
+The `user.py` and `item.py` modules may look like this:
+
+```python
+# user.py
+
+
+DEFAULT_DOMAIN = "gmail.com"
+
+
+class User:
+    def __init__(self, name, email, age):
+        self.name = name
+        self.email = email
+        self.age = age
+
+
+def create_email(name, domain=None):
+    if domain is None:
+        domain = DEFAULT_DOMAIN
+    return name.lower() + "@" + domain
+```
+
+```python
+# item.py
+
+
+class Item:
+    def __init__(self, name, quantity, category):
+        self.name = name
+        self.quantity = quantity
+        self.category = category
+
+```
+
+From the same working directory, you can import the `user` and `item` modules from the `application` package.
+Try the following from an interactive Python session:
+
+```python
+from application import user, item
+
+
+print(user)
+# <module 'application.user' from '.../application/user.py'>
+print(item)
+# <module 'application.item' from '.../application/item.py'>
+
+print(user.__package__)
+# application
+
+usr = user.User("Joe", user.create_email("joe"), 42)
+
+chair = item.Item("Chair", 20, "Furniture")
+oven = item.Item("Oven", 4, "Kitchen")
+```
+
+As you can see, our package modules now have the special variable `__package__` set to `'application'` - the name of package where they are defined.
+
+We can import `application` directly.
+Importing a package is actually equivalent to importing the package's `__init__.py` module.
+
+```python
+import application
+
+
+print(application)
+# <module 'application' from '.../application/__init__.py'>
+
+desk = application.item.Item("Desk", 10, "Furniture")
+# you should get an
+# AttributeError: module 'application' has no attribute 'item'
+```
+
+Note that we **cannot** access the package's submodules from the `application` object.
+In the example above, `item` is not defined within the package's `__init__.py` module, which is what we are really importing.
+
+We can change the `__init__.py` module to import the underlying submodules `user` and `item`.
+It's important to notice that relative imports i.e. `import user` will **not** work in this case.
+Instead, we need to import the `user` and `item` modules as follows:
+
+```python
+# application
+# __init.__py
+
+
+from . import user
+from . import item
+```
+
+Now we can actually access the user and item modules as objects of the `application` "package" (aka the *special* `__init__.py` module)
+
+```python
+import application
+
+print(application.user)
+# <module 'application.user' from '.../application/user.py'>
+
+desk = application.item.Item("Desk", 10, "Furniture")
+# this should not raise any errors!
+```
+
+The `__init__.py` module can allow helpful ways of organizing code
+One of them is this idea of **module splitting** and **assembly**.
+We can break our code into multiple modules that we can made accessible from a top-level package directly thanks, precisely, to the `__init__.py` module.
+
+We could rewrite our example from above as:
+
+```python
+# application
+# __init.__py
+
+
+from .user import User
+from .item import Item
+```
+
+Even if the classes `User` and `Item` are defined in their respective modules, we can directly import them from the top-level package `application`.
+
+```python
+from application import User, Item
+
+
+usr = User()
+desk = Item("Desk", 10, "Furniture")
+```
+
+While this is a super simple example, you can see how module splitting can help organize code into smaller files while making definitions accessible at a higher level.
+
+There is obviously way more to say about packages, including the nightmare of circular imports and how to actually package your code into an installable Python package - but I will leave it here for now.
 
 ***
 
-And with this, I sign off on my Python blogging for some time.
-My next posts will gravitate more towards nteresting but fairly accessible Machine Learning and Data Science topics.
+With this, I sign off on my Python blogging for some time.
+My next posts will gravitate more towards interesting but fairly accessible Machine Learning and Data Science topics.
 Stay tuned!
 
 
